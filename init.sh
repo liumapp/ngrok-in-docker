@@ -15,7 +15,7 @@ echo '.'
 docker pull hteen/ngrok
 
 docker run -idt --name ngrok-server \
--v /Users/docker/ngrok-in-docker/client:/myfiles \
+-v /Users/ngrok-in-docker/client:/myfiles \
 -p 5050:80 \
 -p 2443:443 \
 -p 4443:4443 \
