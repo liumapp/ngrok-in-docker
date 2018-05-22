@@ -15,28 +15,28 @@ Using docker-compose to deploy ngrok in docker .
 
 * if you CentOS has Nginx listen 80 , plz add nginx config below :
 
-	server {
-	     listen       80;
-	     server_name  tunnel.liumapp.com *.tunnel.liumapp.com;
-	     location / {
-		     proxy_redirect off;
-		     proxy_set_header Host $host;
-		     proxy_set_header X-Real-IP $remote_addr;
-		     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-		     proxy_pass http://47.75.156.25:7070;
-	     }
-	 }
-	 server {
-	     listen       443;
-	     server_name  tunnel.liumapp.com *.tunnel.liumapp.com;
-	     location / {
-		     proxy_redirect off;
-		     proxy_set_header Host $host;
-		     proxy_set_header X-Real-IP $remote_addr;
-		     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-		     proxy_pass http://47.75.156.25:2443;
-	     }
-	 }
+		server {
+		     listen       80;
+		     server_name  tunnel.liumapp.com *.tunnel.liumapp.com;
+		     location / {
+			     proxy_redirect off;
+			     proxy_set_header Host $host;
+			     proxy_set_header X-Real-IP $remote_addr;
+			     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+			     proxy_pass http://47.75.156.25:7070;
+		     }
+		 }
+		 server {
+		     listen       443;
+		     server_name  tunnel.liumapp.com *.tunnel.liumapp.com;
+		     location / {
+			     proxy_redirect off;
+			     proxy_set_header Host $host;
+			     proxy_set_header X-Real-IP $remote_addr;
+			     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+			     proxy_pass http://47.75.156.25:2443;
+		     }
+		 }
 
 ### Domain
 
