@@ -2,5 +2,7 @@ version: "2"
 services:
   ngrok:
     container_name: ngrok
-    image: hteen/ngrok
-    
+    image: daocloud.io/bobchengbin/ngrok:latest
+    net: host
+    environment:
+      - DOMAIN="tunnel.phpor.me"
