@@ -24,6 +24,8 @@ Using docker-compose to deploy ngrok in docker .
 			     proxy_set_header X-Real-IP $remote_addr;
 			     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 			     proxy_pass http://172.31.53.9:7070;
+			     proxy_request_buffering off;
+			     proxy_buffering off;
 		     }
 		 }
 		 server {
@@ -35,6 +37,8 @@ Using docker-compose to deploy ngrok in docker .
 			     proxy_set_header X-Real-IP $remote_addr;
 			     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 			     proxy_pass http://172.31.53.9:2443;
+			     proxy_request_buffering off;
+			     proxy_buffering off;
 		     }
 		 }
 
