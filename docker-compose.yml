@@ -2,7 +2,12 @@ version: "2"
 services:
   ngrok:
     container_name: ngrok
-    image: daocloud.io/bobchengbin/ngrok:latest
-    net: host
+    image: hteen/ngrok
     environment:
-      - DOMAIN="tunnel.phpor.me"
+      - DOMAIN="liumapp.com"
+    volumes:
+      - ./client/:/data/ngrok/
+    ports:
+      - "3030:80"
+      - "2243:443"
+      - "4443:4443"
