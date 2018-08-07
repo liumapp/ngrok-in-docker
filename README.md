@@ -13,7 +13,7 @@ Using docker-compose to deploy ngrok in docker .
 
 * wait a few mins , and enter ./clients folder . you can find a "bin" directory . 
 
-* if you CentOS has Nginx listen 80 , plz add nginx config below :
+* if your CentOS has Nginx listen 80 , plz add nginx config below :
 
 		server {
 		     listen       80;
