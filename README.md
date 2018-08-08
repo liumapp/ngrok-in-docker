@@ -41,6 +41,8 @@ Using docker-compose to deploy ngrok in docker .
 			     proxy_buffering off;
 		     }
 		 }
+		 
+	the ip : 172.31.53.9 is your server's ip address 		 
 
 ### Domain
 
