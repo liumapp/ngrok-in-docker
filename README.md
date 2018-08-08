@@ -9,7 +9,7 @@ Using docker-compose to deploy ngrok in docker .
 
 * update init.sh , make the volumes folder you like .
 
-* run init.sh (every time to start ngrok , just simply run init.sh )
+* run init.sh (every time to start ngrok , just simply run run.sh, but the first time you do not need to run run.sh )
 
 * wait a few mins , and enter ./clients folder . you can find a "bin" directory . 
 
